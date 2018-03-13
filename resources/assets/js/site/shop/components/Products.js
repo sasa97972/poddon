@@ -56,7 +56,7 @@ const ProductCard = (props) => {
     return(
         <div className="col-md-6 col-xl-4 card-custom">
             <Card style={cardStyle} className="custom-card__card">
-                <CardMedia>
+                <CardMedia style={{maxHeight: "300px", overflow: "hidden"}}>
                     <img src={product.title_image} alt="Продукция" />
                 </CardMedia>
                 <CardTitle title={product.title} subtitle={`Цена: ${product.price} Грн`} />

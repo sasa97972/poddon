@@ -19,8 +19,8 @@ class FilterController extends Controller
                 "max" => Product::max('price'),
                 "min" => Product::min('price'),
             ],
-            "size" => $products->pluck('size')->unique(),
-            "material" => $products->pluck('material')->unique()
+            "size" => array_values($products->pluck('size')->unique()->toArray()),
+            "material" => array_values($products->pluck('material')->unique()->toArray())
         ]);
     }
 }

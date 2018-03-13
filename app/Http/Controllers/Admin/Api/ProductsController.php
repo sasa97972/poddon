@@ -31,7 +31,7 @@ class ProductsController extends Controller
         $sortBy = $request->get('sortBy');
         $sort = $request->get('sort');
 
-        return response()->json($this->products->getWithSort($perPage, $sortBy, $sort), Response::HTTP_OK);
+        return response()->json($this->products->getWithSortAdmin($perPage, $sortBy, $sort), Response::HTTP_OK);
     }
 
     /**

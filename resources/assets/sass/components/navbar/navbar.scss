@@ -86,12 +86,28 @@ $nav-scroll-link-color-hover: $light-color;
 
 .nav__name {
   margin: 0 0 0 10px;
-  font-size: 2rem;
+  font-size: 1.5em;
   letter-spacing: 2px;
   text-shadow: 1px 1px 1px silver,
               -1px 1px 1px silver;
   color: white;
   transition: text-shadow .5s;
+}
+
+.nav__numbers {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.nav__number {
+  color: #fff;
+  margin-bottom: 0;
+
+  &:first-child {
+    margin-bottom: 5px;
+  }
 }
 
 @include MQ(M) {

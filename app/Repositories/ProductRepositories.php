@@ -38,6 +38,17 @@ class ProductRepositories
     {
         return Product::with('category')
             ->select('products.*', 'categories.name')
+            ->where('products.availability', '=', '1')
+            ->join('categories', 'products.category_id', '=', 'categories.id')
+            ->orderBy($sortBy, $sort)
+            ->groupBy('products.id')
+            ->paginate($perPage);
+    }
+
+    public function getWithSortAdmin($perPage, $sortBy, $sort)
+    {
+        return Product::with('category')
+            ->select('products.*', 'categories.name')
             ->join('categories', 'products.category_id', '=', 'categories.id')
             ->orderBy($sortBy, $sort)
             ->groupBy('products.id')
@@ -54,6 +65,7 @@ class ProductRepositories
     {
         return Product::with('category')
             ->select('products.*', 'categories.name')
+            ->where('products.availability', '=', '1')
             ->join('categories', 'products.category_id', '=', 'categories.id')
             ->orderBy($sortBy, $sort)
             ->groupBy('products.id')

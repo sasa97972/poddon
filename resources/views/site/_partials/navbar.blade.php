@@ -8,6 +8,10 @@
                     </div>
                     <h5 class="nav__name">Poddonu</h5>
                 </a>
+                <div class="nav__numbers">
+                    <p class="nav__number">066-900-96-02</p>
+                    <p class="nav__number">098-575-87-70</p>
+                </div>
             </div>
             <div class="col-4 hamburger__col">
                 <div class="hamburger__wrapper">

@@ -43,6 +43,9 @@
 .services__text {
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-overflow: clip;
+  overflow: hidden;
   position: absolute;
   left: 0;top: 0;bottom: 0;right: 0;
   padding: 10px;
@@ -53,7 +56,6 @@
   background-color: rgba(255,0,0,.8);
   opacity: 0;
   transition: opacity .5s;
-  text-overflow: ellipsis;
 }
 
 .services__header {
