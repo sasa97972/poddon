@@ -65,7 +65,7 @@ class ProductsController extends Controller
         $product->price = $request->price;
         $product->weight = $request->weight;
         $product->size = $request->size;
-        $product->availability = $request->availability;
+        $product->availability = $request->availability === "true";
         $product->category_id = $request->category_id;
         if($request->file('image')) {
             $path = $request->file('image')->store('products', 'public');
@@ -121,7 +121,7 @@ class ProductsController extends Controller
             "price" => $request->price,
             "weight" => $request->weight,
             "size" => $request->size,
-            "availability" => (bool)$request->availability,
+            "availability" => $request->availability === "true",
             "category_id" => $request->category_id,
             'title_image' => $path
         ]);

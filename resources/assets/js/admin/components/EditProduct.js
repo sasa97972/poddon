@@ -67,7 +67,7 @@ class EditProduct extends Component
                 description: product.description,
                 price: product.price,
                 size: product.size,
-                availability: product.availability,
+                availability: !!product.availability,
                 weight: product.weight,
                 dynamic: product.dynamic,
                 static: product.static,
@@ -337,7 +337,7 @@ class EditProduct extends Component
                                             type="checkbox"
                                             className="form-check-input"
                                             name="availability"
-                                            value={this.state.availability}
+                                            checked={this.state.availability}
                                             onChange={(e) => {this.handleCheck(e)}}
                                         />
                                         <label className="form-check-label">Товар в наличии</label>
