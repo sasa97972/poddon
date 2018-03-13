@@ -1,0 +1,46 @@
+
+// Body
+$body-bg: #fff;
+
+// Borders
+$laravel-border-color: darken($body-bg, 10%);
+$list-group-border-color: $laravel-border-color;
+
+$card-border-color: $laravel-border-color;
+
+// Brands
+$primary: #3097D1;
+$info: #8eb4cb;
+$success: #2ab27b;
+$warning: #cbb956;
+$danger: #bf5329;
+
+// Typography
+$font-family-sans-serif: "Raleway", sans-serif;
+$font-size-base: .875rem; // 14px
+$line-height-base: 1.6;
+$text-color: #636b6f;
+
+// Inputs
+$input-border-color: lighten($text-color, 40%);
+$input-placeholder-color: lighten($text-color, 30%);
+
+// colors
+$color-1: #25283D; // YANKEES BLUE
+$color-2: #8F3985; // PLUM
+$color-3: #ffffff; // WHITE
+$color-4: #ECF0F1; // ANTI-FLASH WHITE
+
+// header size
+$header-height-small: 60px;
+$header-height: 80px;
+
+$secondary-nav-height-small: 50px;
+$secondary-nav-height: 70px;
+
+//Sites color
+$primary-text-color: #226B80;
+$primary-text-color-light: #35B0AB;
+$secondary-color: #C5F0A4;
+$light-color: #FAFFB8;
+$title-color: #656565;

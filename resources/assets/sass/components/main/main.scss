@@ -1,0 +1,70 @@
+@import "../../variables";
+@import "../../mixins";
+@import "../../extends";
+
+.main {
+  background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(/images/main/poddon.jpg) no-repeat center center / cover fixed;
+}
+
+.main__inner {
+  @extend %flex-col-nowrap;
+  @extend %horizontal-center;
+  height: 100vh;
+  min-height: 500px;
+}
+
+
+@include MQ(M) {
+  .slider-fluid__content {
+    background-attachment: scroll;
+  }
+}
+
+.main__text-content {
+  margin-left: 10rem;
+  max-width: 500px;
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -20px;
+    width: 3px;
+    background-color: $primary-text-color-light;
+  }
+}
+
+.main__header {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.main__text {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+@include MQ(S) {
+  .main__text-content {
+    margin-left: 3.5rem;
+  }
+
+  .main__header {
+    font-size: 2rem;
+    color: #fff;
+  }
+
+  .main__text {
+    font-size: 1rem;
+    color: #fff;
+  }
+}
+
+@include MQ(XS) {
+  .main__text-content {
+    margin-left: 1.5rem;
+  }
+}

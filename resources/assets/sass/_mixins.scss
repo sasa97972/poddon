@@ -1,0 +1,103 @@
+// center vertically and/or horizontally an absolute positioned element
+
+@mixin center($xy:xy) {
+  @if $xy == xy {
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    transform: translateX(-50%) translateY(-50%);
+}
+@else if $xy == x {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+}
+@else if $xy == y {
+        top: 50%;
+        bottom: auto;
+        transform: translateY(-50%);
+}
+}
+
+// border radius
+
+@mixin border-radius($radius:.25em) {
+  border-radius: $radius;
+}
+
+// antialiasing mode font rendering
+
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// clearfix
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+}
+
+@mixin gitchText($offset, $text) {
+  content: $text;
+  position: absolute;
+  left: $offset;
+  top: $offset;
+  clip: rect(0, 900px, 0, 0);
+  background-color: rgba(0,0,0,.5);
+  color: #fff;
+  animation: glitch 3s infinite alternate-reverse;
+  animation-delay: 4s;
+}
+
+// color tint and shade
+
+@function shade(
+  $color,
+  $percent
+) {
+
+  @return mix(#000, $color, $percent);
+}
+@function tint(
+  $color,
+  $percent
+) {
+
+  @return mix(#fff, $color, $percent);
+}
+
+
+
+// breakpoints
+
+$XS:    0px;
+$S:     575px;
+$M:     767px;
+$L:     991px;
+$XL:    1200px;
+
+// media queries
+
+@mixin MQ($canvas) {
+  @if $canvas == XS {
+    @media only screen and (max-width: $S) { @content; }
+  }
+  @else if $canvas == S {
+    @media only screen and (max-width: $M) { @content; }
+  }
+  @else if $canvas == M {
+    @media only screen and (max-width: $L) { @content; }
+  }
+  @else if $canvas == L {
+    @media only screen and (max-width: $XL) { @content; }
+  }
+  @else if $canvas == XL {
+    @media only screen and (min-width: $XL) { @content; }
+  }
+}

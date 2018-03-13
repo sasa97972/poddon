@@ -1,0 +1,50 @@
+@import "../../mixins";
+@import "../../variables";
+
+.hero {
+  padding: 200px 0;
+  margin-bottom: 50px;
+  background: linear-gradient(to right, rgba(0,0,0,.5), rgba(0,0,0,.3)), url(/images/hero/1.jpg) no-repeat center center / cover fixed;
+}
+
+@include MQ(M) {
+  .hero {
+    padding: 150px 0;
+    background-attachment: scroll !important;
+  }
+}
+
+.hero__header {
+  display: inline-block;
+  margin-left: 50px;
+  color: #fff;
+  position: relative;
+  font-size: 5em;
+  //text-transform: uppercase;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -20px;
+    width: 3px;
+    background-color: $primary-text-color-light;
+  }
+}
+
+@include MQ(XS) {
+  .hero__header {
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@include MQ(L) {
+  .hero__header {
+    font-size: 3em;
+  }
+}
+
