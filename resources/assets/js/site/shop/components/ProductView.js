@@ -9,13 +9,14 @@ export const ProductView = (props) => {
                 <h1>{product.title}</h1>
                 <p>Цена: {product.price} Грн</p>
                 <p>{product.description}</p>
-                <p>Товар подходит для:</p>
+                <p>Характеристики:</p>
                 <ul>
-                    {product.phones.length ? product.phones.map((phone) => (
-                        <li key={phone.id}>{phone.name} {phone.model};</li>
-                    )) :
-                        <li>Для всех телефонов</li>
-                    }
+                    <li>Размеры {product.size};</li>
+                    <li>Материал {product.material};</li>
+                    <li>Вес поддона {product.weight};</li>
+                    <li>Стилажная нагрузка: {product.load};</li>
+                    <li>Нагрузка в статике: {product.static};</li>
+                    <li>Нагрузка в динамике: {product.dynamic};</li>
                 </ul>
                 <RaisedButton
                     label="Купить"

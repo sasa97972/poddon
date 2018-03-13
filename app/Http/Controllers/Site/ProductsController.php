@@ -32,7 +32,7 @@ class ProductsController extends Controller
 
 
         //findOrFail
-        $product = Product::with('category', 'phones', 'images')->find($id);
+        $product = Product::with('category', 'images')->find($id);
         $product->title_image = Storage::url($product->title_image);
         foreach($product->images as $image) {
             $image->path = Storage::url($image->path);

@@ -8,7 +8,6 @@ require('magnific-popup');
 //partials
 require('./site/navbar/navbar');
 require('./site/buttons/top');
-require('./site/counter/counter');
 require('./site/testimonials/testimonials');
 require('./site/product-slider/product-slider');
 require('./site/cart/cart');

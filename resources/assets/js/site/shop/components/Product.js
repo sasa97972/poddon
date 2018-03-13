@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import {withRouter} from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {getProduct} from "../actions/getProduct";
+import {addProduct} from "../actions/cart";
 import {getUser} from "../actions/getUser";
 import {ProductView} from "./ProductView";
 import {Comments} from "./Comments";
@@ -28,6 +29,7 @@ class Product extends Component
         this.discardReply = this.discardReply.bind(this);
         this.deleteComment = this.deleteComment.bind(this);
         this.changePage = this.changePage.bind(this);
+        this.addProductToCart = this.addProductToCart.bind(this);
     }
 
     componentDidMount() {
@@ -101,15 +103,19 @@ class Product extends Component
         });
     }
 
+    addProductToCart(id) {
+        this.props.addProduct({product_id: id}).then(() => $(".cart__modal").fadeIn(500));
+    }
+
     render() {
-        const {product, user, addProduct} = this.props;
+        const {product, user} = this.props;
         const {comment, button, parent_name, currentPage, pages, comments} = this.state;
         return(
            <MuiThemeProvider>
                <div>
                    <ProductView
                        product={product.product}
-                       addProduct={addProduct}
+                       addProduct={this.addProductToCart}
                    />
                    <Comments
                        comments={comments}
@@ -143,6 +149,9 @@ const mapDispatchToProps = dispatch => ({
     },
     getUser: (params) => {
         dispatch(getUser(params));
+    },
+    addProduct: (params) => {
+        return dispatch(addProduct(params));
     },
 });
 

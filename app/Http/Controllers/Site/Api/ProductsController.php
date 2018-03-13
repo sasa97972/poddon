@@ -44,7 +44,7 @@ class ProductsController extends Controller
 
     public function show($id)
     {
-        $product = Product::with('category', 'phones', 'images')->find($id); //or fail
+        $product = Product::with('category', 'images')->find($id); //or fail
         $product->title_image = Storage::url($product->title_image);
         foreach($product->images as $image) {
             $image->path = Storage::url($image->path);

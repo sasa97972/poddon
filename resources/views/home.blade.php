@@ -14,7 +14,7 @@
         <div class="points__item col-md-4 col-sm-12">
             <div class="points__icon"><i class="fas fa-heartbeat" aria-hidden="true"></i></div>
             <h2 class="points__header">Отличное качество</h2>
-            <p class="points__text">У нас самое лучшее качество палетов, которые мы сами контролируем</p>
+            <p class="points__text">У нас самое лучшее качество поддонов, которые мы сами контролируем</p>
         </div>
         <div class="points__item col-md-4 col-sm-12">
             <div class="points__icon"><i class="fas fa-heartbeat" aria-hidden="true"></i></div>
@@ -64,38 +64,18 @@
         <div class="row counter__row">
             <div class="col-md-4 col-sm-12 counter__content">
                 <div class="counter__icon"><i class="fas fa-users"></i></div>
-                <h2 class="counter__count first-count">1327</h2>
+                <h2 class="counter__count first-count">1000+</h2>
                 <p class="counter__text">Довольных покупателей</p>
             </div>
             <div class="col-md-4 col-sm-12 counter__content">
                 <div class="counter__icon"><i class="fas fa-mobile-alt"></i></div>
-                <h2 class="counter__count second-count">13334</h2>
+                <h2 class="counter__count second-count">1 000 000 +</h2>
                 <p class="counter__text">Поддонов продано</p>
             </div>
             <div class="col-md-4 col-sm-12 counter__content">
                 <div class="counter__icon"><i class="fas fa-sun"></i></div>
-                <h2 class="counter__count third-count">336</h2>
-                <p class="counter__text">Дней работает наш магазин</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="testimonials container-fluid">
-    <div class="container">
-        <div class="row testimonials__row">
-            <div class="col-md-12">
-                <h2 class="testimonials__header">Отзывы о магазине</h2>
-            </div>
-            <div class="col-md-12">
-                <div class="testimonials__slider slider">
-                    <div class="testimonials__slider-item">
-                        <p class="testimonials__text">My husband and I live in the United States but chose to get married in beautiful Alghero. Eva was always responsive through email, Skype, or phone (A+ when planning a destination wedding) and offered great advice on everything from wedding themes and table setups to props and vendors. Eva also has a keen eye for design and style and worked with us to transform the wedding venue into our own magical oasis. I would definitely recommend Eva's services!</p>
-                    </div>
-                    <div class="testimonials__slider-item">
-                        <p class="testimonials__text">We got married as Belgians in Castelsardo and had our ceremony organised and planned by Eva. She is very friendly, professional and client oriented. Even from a distance we were able to plan the ceremony which resulted in a dream come through scenario... Bravissimo!</p>
-                    </div>
-                </div>
+                <h2 class="counter__count third-count">15</h2>
+                <p class="counter__text">Лет наша компания на рынке</p>
             </div>
         </div>
     </div>
