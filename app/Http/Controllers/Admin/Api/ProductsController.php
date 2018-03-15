@@ -63,6 +63,7 @@ class ProductsController extends Controller
         $product->static = $request->static;
         $product->load = $request->load;
         $product->price = $request->price;
+        $product->currency = $request->currency;
         $product->weight = $request->weight;
         $product->size = $request->size;
         $product->availability = $request->availability === "true";
@@ -119,6 +120,7 @@ class ProductsController extends Controller
             "static" => $request->static,
             "load" => $request->load,
             "price" => $request->price,
+            "currency" => $request->currency,
             "weight" => $request->weight,
             "size" => $request->size,
             "availability" => $request->availability === "true",
@@ -126,7 +128,7 @@ class ProductsController extends Controller
             'title_image' => $path
         ]);
 
-        return response()->json($request->availability, Response::HTTP_OK);
+        return response()->json($product, Response::HTTP_OK);
     }
 
     /**

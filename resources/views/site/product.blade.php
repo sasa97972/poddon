@@ -1,7 +1,50 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="{{ app()->getLocale() }}">
+<head>
+    <meta charset="utf-8">
 
-@section('content')
+    <title>{{$product->title}}</title>
 
+    <meta name="description" content={{$product->description}}>
+    <meta name="keywords" content="Купить поддоны, магазин поддонов, продать поддоны, поддоны, паллеты, купить паллеты">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#000">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#000">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-rim-auto-match" content="none">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115814669-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-115814669-1');
+    </script>
+
+</head>
+<body>
+
+@include('site._partials.navbar')
+
+<main class="cd-main-content">
     <div class="hero container-fluid">
         <div class="row no-gutters">
             <div class="col-md-12">
@@ -45,4 +88,13 @@
             </div>
         </div>
     </div>
-@endsection
+</main>
+
+<div class="top"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
+
+@include('site._partials.footer')
+
+<!-- Scripts -->
+<script src="{{ asset('js/site/site.js') }}"></script>
+</body>
+</html>

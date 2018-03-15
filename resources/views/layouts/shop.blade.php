@@ -5,8 +5,8 @@
 
     <title>Poddonu - покупка и продажа поддонов</title>
 
-    <meta name="description" content="Poddonu - мы компания, которая занимается покупкой и продажей поддонов. Здесь вы можете найти любые поддоны, которые вам необходимы">
-    <meta name="keywords" content="Купить поддоны, купить поддоны Киев, продать поддоны, поддоны, паллеты, купить паллеты">
+    <meta name="description" content="Poddonu - добро пожаловать в наш магазин. Здесь вы можете найти любые поддоны, которые вам необходимы">
+    <meta name="keywords" content="Купить поддоны, магазин поддонов, продать поддоны, поддоны, паллеты, купить паллеты">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,15 +42,15 @@
 </head>
 <body>
 
-    @include('site._partials.navbar')
+@include('site._partials.navbar')
 
-    <main class="cd-main-content">
-        @yield('content')
-    </main>
+<main class="cd-main-content">
+    @yield('content')
+</main>
 
-    <div class="top"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
+<div class="top"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
 
-    @include('site._partials.footer')
+@include('site._partials.footer')
 
 <!-- Scripts -->
 <script src="{{ asset('js/site/site.js') }}"></script>

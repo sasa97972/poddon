@@ -14,6 +14,7 @@ class Product extends Model
         'description',
         'category_id',
         'price',
+        'currency',
         'material',
         'dynamic',
         'static',

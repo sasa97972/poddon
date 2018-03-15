@@ -21,6 +21,7 @@ class CreateProductsTable extends Migration
             $table->integer('category_id')->unsigned()->index();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->integer('price');
+            $table->string('currency');
             $table->string('material');
             $table->integer('static');
             $table->integer('dynamic');

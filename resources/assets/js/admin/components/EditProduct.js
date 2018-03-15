@@ -19,6 +19,7 @@ class EditProduct extends Component
             availability: true,
             category_id: 1,
             price: 0,
+            currency: "Грн",
             image: null,
             imagePreviewUrl: "",
             button: false,
@@ -66,6 +67,7 @@ class EditProduct extends Component
                 title: product.title,
                 description: product.description,
                 price: product.price,
+                currency: product.currency,
                 size: product.size,
                 availability: !!product.availability,
                 weight: product.weight,
@@ -92,6 +94,7 @@ class EditProduct extends Component
         data.append("dynamic", `${this.state.dynamic}`);
         data.append("static", `${this.state.static}`);
         data.append("price", `${this.state.price}`);
+        data.append("currency", this.state.currency);
         data.append("availability", `${this.state.availability}`);
         data.append("category_id", `${this.state.category_id}`);
         data.append("_method", 'PUT');
@@ -108,7 +111,6 @@ class EditProduct extends Component
         };
 
         return axios(settings).then(response => {
-            console.log(response);
             return response.statusText === "Updated";
         });
     }
@@ -302,12 +304,23 @@ class EditProduct extends Component
                                     </div>
 
                                     <div className="form-group">
-                                        <label>Цена товара (в Грн)</label>
+                                        <label>Цена товара</label>
                                         <input
                                             type="number"
                                             className="form-control"
                                             name="price"
                                             value={this.state.price}
+                                            onChange={(e) => {this.handleInput(e)}}
+                                        />
+                                    </div>
+
+                                    <div className="form-group">
+                                        <label>Валюта</label>
+                                        <input
+                                            type="text"
+                                            className="form-control"
+                                            name="currency"
+                                            value={this.state.currency}
                                             onChange={(e) => {this.handleInput(e)}}
                                         />
                                     </div>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+
+<url>
+  <loc>https://poddonu.com.ua/</loc>
+  <lastmod>2018-03-15T07:59:14+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://poddonu.com.ua/shop</loc>
+  <lastmod>2018-03-15T07:59:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://poddonu.com.ua/shop/euro</loc>
+  <lastmod>2018-03-15T07:59:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://poddonu.com.ua/shop/plastic</loc>
+  <lastmod>2018-03-15T07:59:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://poddonu.com.ua/shop/pallets</loc>
+  <lastmod>2018-03-15T07:59:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://poddonu.com.ua/shop/eurotara</loc>
+  <lastmod>2018-03-15T07:59:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://poddonu.com.ua/login</loc>
+  <lastmod>2018-03-15T07:59:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://poddonu.com.ua/register</loc>
+  <lastmod>2018-03-15T07:59:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://poddonu.com.ua/password/reset</loc>
+  <lastmod>2018-03-15T07:59:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>

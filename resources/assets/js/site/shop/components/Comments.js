@@ -101,7 +101,7 @@ export const Comments = (props) => {
                         currentPage={currentPage}
                         changePage={changePage}
                     />
-                    {appUser ?
+                    {Object.keys(appUser).length ?
                         <div>
                             <TextField
                                 floatingLabelText="Оставить комментарий"

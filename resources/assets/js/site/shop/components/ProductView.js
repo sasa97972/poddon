@@ -7,16 +7,16 @@ export const ProductView = (props) => {
         <div>
             {product && <div>
                 <h1>{product.title}</h1>
-                <p>Цена: {product.price} Грн</p>
+                <p>Цена: {product.price} {product.currency}</p>
                 <p>{product.description}</p>
                 <p>Характеристики:</p>
                 <ul>
                     <li>Размеры {product.size};</li>
                     <li>Материал {product.material};</li>
-                    <li>Вес поддона {product.weight};</li>
-                    <li>Стилажная нагрузка: {product.load};</li>
-                    <li>Нагрузка в статике: {product.static};</li>
-                    <li>Нагрузка в динамике: {product.dynamic};</li>
+                    <li>Вес поддона {product.weight} Кг;</li>
+                    <li>Стеллажная нагрузка: {product.load} Кг;</li>
+                    <li>Нагрузка в статике: {product.static} Кг;</li>
+                    <li>Нагрузка в динамике: {product.dynamic} Кг;</li>
                 </ul>
                 <RaisedButton
                     label="Купить"

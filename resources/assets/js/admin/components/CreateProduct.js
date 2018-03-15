@@ -14,6 +14,7 @@ class CreateProduct extends Component
             load: 0,
             size: "",
             weight: 0,
+            currency: "Грн",
             availability: true,
             category_id: 1,
             price: 0,
@@ -30,7 +31,7 @@ class CreateProduct extends Component
 
     handleInput(event) {
         this.setState({[event.target.name]: event.target.value}, () => {
-            if(this.state.description && this.state.title) {
+            if(this.state.description && this.state.title && this.state.weight) {
                 this.setState({button: true});
             } else {
                 this.setState({button: false});
@@ -74,6 +75,7 @@ class CreateProduct extends Component
         data.append("dynamic", `${this.state.dynamic}`);
         data.append("static", `${this.state.static}`);
         data.append("price", `${this.state.price}`);
+        data.append("currency", this.state.currency);
         data.append("availability", `${this.state.availability}`);
         data.append("category_id", `${this.state.category_id}`);
 
@@ -92,7 +94,6 @@ class CreateProduct extends Component
 
         const success = axios(settings).then(response =>  {
             this.setState({product_id: response.data});
-            console.log(response);
             return response.statusText === "Created";
         });
 
@@ -151,6 +152,9 @@ class CreateProduct extends Component
     handleSubmit(event) {
         event.preventDefault();
         if(!this.state.button) {
+            return false;
+        } else if (!this.state.image) {
+            alert("Необходимо добавить изображение !");
             return false;
         }
         if(this.saveData()) {
@@ -293,12 +297,23 @@ class CreateProduct extends Component
                                     </div>
 
                                     <div className="form-group">
-                                        <label>Цена товара (в Грн)</label>
+                                        <label>Цена товара</label>
                                         <input
                                             type="number"
                                             className="form-control"
                                             name="price"
                                             value={this.state.price}
+                                            onChange={(e) => {this.handleInput(e)}}
+                                        />
+                                    </div>
+
+                                    <div className="form-group">
+                                        <label>Валюта</label>
+                                        <input
+                                            type="text"
+                                            className="form-control"
+                                            name="currency"
+                                            value={this.state.currency}
                                             onChange={(e) => {this.handleInput(e)}}
                                         />
                                     </div>

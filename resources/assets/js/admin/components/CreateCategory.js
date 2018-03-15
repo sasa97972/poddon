@@ -70,6 +70,9 @@ class CreateCategory extends Component
         event.preventDefault();
         if(!this.state.button) {
             return false;
+        } else if (!this.state.image) {
+            alert("Необходимо добавить изображение !");
+            return false;
         }
         if(this.saveData()) {
             $("#successModal").modal('show');

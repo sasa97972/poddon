@@ -19,7 +19,7 @@
         <div class="points__item col-md-4 col-sm-12">
             <div class="points__icon"><i class="fas fa-heartbeat" aria-hidden="true"></i></div>
             <h2 class="points__header">Всегда в наличии</h2>
-            <p class="points__text">Весь товар который вы найдете у нас на сайте, всегда в наличии</p>
+            <p class="points__text"></p>
         </div>
     </div>
 </section>

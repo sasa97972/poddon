@@ -59,7 +59,7 @@ const ProductCard = (props) => {
                 <CardMedia style={{maxHeight: "300px", overflow: "hidden"}}>
                     <img src={product.title_image} alt="Продукция" />
                 </CardMedia>
-                <CardTitle title={product.title} subtitle={`Цена: ${product.price} Грн`} />
+                <CardTitle title={product.title} subtitle={`Цена: ${product.price} ${product.currency}`} />
                 <CardText>
                     {product.description}
                 </CardText>
