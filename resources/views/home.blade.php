@@ -33,7 +33,7 @@
     <div class="row services__row">
         @forelse($categories as $category)
         <div class="services__service col-md-4 col-sm-6 col-xs-12">
-            <a href={{url("/shop/".$category->alias)}} class="services__link">
+            <a href={{url("/shop/".$category->alias)}} class="services__link" itemprop="articleSection">
                 <div class="services__image">
                     <img src={{$category->title_image}} class="services__image-image" alt="Alghero">
                     <p class="services__text">{{$category->description}}</p>

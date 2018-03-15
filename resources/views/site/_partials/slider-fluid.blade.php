@@ -34,7 +34,7 @@
         <div class="col-md-12">
             <div class="main__inner">
                 <div class="main__text-content">
-                    <h1 class="main__header">Продажа и покупка поддонов</h1>
+                    <h1 class="main__header" itemprop="headline">Продажа и покупка поддонов</h1>
                     <p class="main__text"> Наша Компания реализует новые и б/у Деревянные и пластиковые поддоны.
                         <br> Также у Вас есть уникальная возможность продать Вашы поддоны.</p>
                 </div>

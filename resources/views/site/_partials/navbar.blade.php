@@ -1,4 +1,4 @@
-<nav class="nav cd-auto-hide-header">
+<nav class="nav cd-auto-hide-header" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
     <div class="container">
         <div class="row nav__row">
             <div class="col-8 col-lg-4 nav__logo">
@@ -8,9 +8,9 @@
                     </div>
                     <h5 class="nav__name">Poddonu</h5>
                 </a>
-                <div class="nav__numbers">
-                    <p class="nav__number">066-900-96-02</p>
-                    <p class="nav__number">098-575-87-70</p>
+                <div class="nav__numbers" itemscope itemtype="http://schema.org/PostalAddress">
+                    <p class="nav__number"><span itemprop="telephone">066-900-96-02</span></p>
+                    <p class="nav__number"><span itemprop="telephone">098-575-87-70</span></p>
                 </div>
             </div>
             <div class="col-4 hamburger__col">
@@ -24,9 +24,9 @@
             </div>
             <div class="col-md-12 col-lg-4 nav__menu">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href={{url("/")}} class="nav-link <?php if(Request::path() === "/"){ ?>nav-link_active<?php } ?>">Главная</a></li>
+                    <li class="nav__item"><a href={{url("/")}} class="nav-link <?php if(Request::path() === "/"){ ?>nav-link_active<?php } ?>" itemprop="url">Главная</a></li>
                     <li class="nav__item nav__item-open-nested">
-                        <a href={{url("/shop")}} class="nav-link <?php if(Request::path() === "shop"){ ?>nav-link_active<?php } ?>">Магазин <i class="fas fa-caret-down"></i></a>
+                        <a href={{url("/shop")}} class="nav-link <?php if(Request::path() === "shop"){ ?>nav-link_active<?php } ?>" itemprop="url">Магазин <i class="fas fa-caret-down"></i></a>
 
                             <div class="baron baron__root baron__clipper _simple">
                                 <div class="baron__scroller">
