@@ -5,6 +5,7 @@ import TextField from 'material-ui/TextField';
 import {connect} from "react-redux";
 import {withRouter} from "react-router-dom";
 import {getProducts, addProduct} from '../actions/cart';
+import {getUser} from "../actions/getUser";
 
 class Cart extends Component
 {
@@ -13,6 +14,7 @@ class Cart extends Component
         this.state = {
             confirm: false,
             phone_number: "",
+            user_name: "",
             complete: false,
             button: false
         };
@@ -44,6 +46,7 @@ class Cart extends Component
 
     componentWillMount() {
         this.props.getProducts();
+        this.props.getUser({url: '/user'});
     }
 
     continueShop() {
@@ -68,6 +71,12 @@ class Cart extends Component
         this.setState({phone_number: value});
     }
 
+    handleInput(event) {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
+    }
+
     completeOrder() {
         if(this.state.phone_number.length < 10) {
             alert("Введите коректный телефон!");
@@ -81,6 +90,7 @@ class Cart extends Component
             method: "POST",
             data: {
                 phone_number: this.state.phone_number,
+                user_name: this.state.user_name
             }
         };
 
@@ -91,7 +101,7 @@ class Cart extends Component
     }
 
     render() {
-        const {phone_number, confirm, complete, button} = this.state;
+        const {phone_number, confirm, complete, button, user_name} = this.state;
         const {products} = this.props;
         return(
             <CartView
@@ -105,6 +115,9 @@ class Cart extends Component
                 completeOrder={this.completeOrder}
                 complete={complete}
                 button={button}
+                user_name={user_name}
+                handleInput={(e) => this.handleInput(e)}
+                user={this.props.user}
             />
         );
     }
@@ -112,7 +125,8 @@ class Cart extends Component
 
 const CartView = (props) => {
     const {products, continueShop, deleteProduct, confirm, changeNumber, number, confirmOrder, completeOrder,
-    complete, button} = props;
+    complete, button, user_name, handleInput, user} = props;
+    console.log(user);
     return(
         <MuiThemeProvider>
             <div className="cart__modal">
@@ -160,12 +174,21 @@ const CartView = (props) => {
                         </div>
                     :
                         <div className="cart__content">
+                            {(!user || !Object.keys(user).length) && <TextField
+                                onChange={handleInput}
+                                floatingLabelText="Ваше имя"
+                                value={user_name}
+                                fullWidth={true}
+                                name="user_name"
+                            />}
                             <TextField
+                                style={{marginBottom: "20px"}}
                                 onChange={changeNumber}
                                 floatingLabelText="Введите ваш номер телефона"
                                 value={number}
                                 fullWidth={true}
                             />
+                            <br/>
                             <RaisedButton
                                 label="Подтвердить заказ"
                                 secondary={true}
@@ -190,7 +213,7 @@ const CartView = (props) => {
 
 const mapStateToProps = state => ({
     products: state.cart.products,
-    //total_price: state.cart.total_price
+    user: state.user
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -199,6 +222,9 @@ const mapDispatchToProps = dispatch => ({
     },
     addProduct: (params) => {
         return dispatch(addProduct(params));
+    },
+    getUser: (params) => {
+        dispatch(getUser(params));
     },
 });
 

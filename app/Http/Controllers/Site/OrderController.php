@@ -41,7 +41,13 @@ class OrderController extends Controller
         $order = new Order();
 
         $order->phone_number = $request->phone_number;
-        $order->user_id = NULL;//Auth::guest() ? null : Auth::user()->id;
+        if(Auth::guest()) {
+            $order->user_id = NULL;
+            $order->user_name = $request->user_name;
+        } else {
+            $order->Auth::user()->id;
+        }
+
         $order->save();
 
         $products = $request->session()->get('cart');

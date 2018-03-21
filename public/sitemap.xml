@@ -4,51 +4,127 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
 <url>
   <loc>https://poddonu.com.ua/</loc>
-  <lastmod>2018-03-15T07:59:14+00:00</lastmod>
+  <lastmod>2018-03-19T10:38:34+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://poddonu.com.ua/shop</loc>
-  <lastmod>2018-03-15T07:59:14+00:00</lastmod>
+  <lastmod>2018-03-19T10:38:34+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://poddonu.com.ua/shop/euro</loc>
-  <lastmod>2018-03-15T07:59:14+00:00</lastmod>
+  <lastmod>2018-03-19T10:38:34+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://poddonu.com.ua/shop/plastic</loc>
-  <lastmod>2018-03-15T07:59:14+00:00</lastmod>
+  <lastmod>2018-03-19T10:38:34+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://poddonu.com.ua/shop/pallets</loc>
-  <lastmod>2018-03-15T07:59:14+00:00</lastmod>
+  <lastmod>2018-03-19T10:38:34+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://poddonu.com.ua/shop/eurotara</loc>
-  <lastmod>2018-03-15T07:59:14+00:00</lastmod>
+  <lastmod>2018-03-19T10:38:34+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://poddonu.com.ua/login</loc>
-  <lastmod>2018-03-15T07:59:14+00:00</lastmod>
+  <lastmod>2018-03-19T10:38:34+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://poddonu.com.ua/register</loc>
-  <lastmod>2018-03-15T07:59:14+00:00</lastmod>
+  <lastmod>2018-03-19T10:38:34+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>https://poddonu.com.ua/shop/product/3</loc>
+  <lastmod>2018-03-19T10:38:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://poddonu.com.ua/shop/product/4</loc>
+  <lastmod>2018-03-19T10:38:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://poddonu.com.ua/shop/product/5</loc>
+  <lastmod>2018-03-19T10:38:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://poddonu.com.ua/shop/product/6</loc>
+  <lastmod>2018-03-19T10:38:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://poddonu.com.ua/shop/product/7</loc>
+  <lastmod>2018-03-19T10:38:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://poddonu.com.ua/shop/product/8</loc>
+  <lastmod>2018-03-19T10:38:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://poddonu.com.ua/shop/product/9</loc>
+  <lastmod>2018-03-19T10:38:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://poddonu.com.ua/shop/product/10</loc>
+  <lastmod>2018-03-19T10:38:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://poddonu.com.ua/shop/product/11</loc>
+  <lastmod>2018-03-19T10:38:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://poddonu.com.ua/shop/product/12</loc>
+  <lastmod>2018-03-19T10:38:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://poddonu.com.ua/shop/product/13</loc>
+  <lastmod>2018-03-19T10:38:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://poddonu.com.ua/shop/product/15</loc>
+  <lastmod>2018-03-19T10:38:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://poddonu.com.ua/shop/product/17</loc>
+  <lastmod>2018-03-19T10:38:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://poddonu.com.ua/shop/product/18</loc>
+  <lastmod>2018-03-19T10:38:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://poddonu.com.ua/shop/product/20</loc>
+  <lastmod>2018-03-19T10:38:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://poddonu.com.ua/password/reset</loc>
-  <lastmod>2018-03-15T07:59:14+00:00</lastmod>
+  <lastmod>2018-03-19T10:38:34+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 

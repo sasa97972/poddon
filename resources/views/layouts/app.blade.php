@@ -39,6 +39,25 @@
         gtag('config', 'UA-115814669-1');
     </script>
 
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "Organization",
+          "url": "https://poddonu.com.ua",
+          "contactPoint": [{
+            "@type": "ContactPoint",
+            "telephone": "066-900-96-03",
+            "contactType": "Александр",
+            "areaServed": "UKR"
+          },{
+            "@type": "ContactPoint",
+            "telephone": "098-575-87-70",
+            "contactType": "Александр",
+            "areaServed": "UKR"
+          }]
+        }
+    </script>
+
 </head>
 <body>
 

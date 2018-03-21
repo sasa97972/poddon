@@ -252,6 +252,7 @@ export default class Orders extends Component
                                                 user={order.user}
                                                 positions={order.positions}
                                                 completed={order.completed}
+                                                user_name={order.user_name}
                                                 deleteOrder={() => {this.handleDelete(order.id)}}
                                                 completeOrder={this.completeOrder}
                                                 number={order.phone_number}
@@ -276,7 +277,7 @@ export default class Orders extends Component
 }
 
 const OrderBlock = (props) => {
-    const {id, user, positions, deleteOrder, completed, completeOrder, number} = props;
+    const {id, user, positions, deleteOrder, completed, completeOrder, number, user_name} = props;
     let totalPrice = 0;
     {positions.map((position) => {
         totalPrice += position.product.price;
@@ -285,7 +286,7 @@ const OrderBlock = (props) => {
         <tr>
             <th scope="row">{id}</th>
             <td>{user ? user.email : "Отсутствует"}</td>
-            <td>{user ? user.name : "Гость"}</td>
+            <td>{user ? user.name : user_name}</td>
             <td>{number}</td>
             <td>
                 <ul>

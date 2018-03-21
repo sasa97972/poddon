@@ -39,6 +39,35 @@
         gtag('config', 'UA-115814669-1');
     </script>
 
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@id": "https://poddonu.com.ua",
+              "name": "Home"
+            }
+          },{
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@id": "{{"https://poddonu.com.ua/shop/".$product->category->alias}}",
+              "name": "{{$product->category->name}}"
+            }
+          }, {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@id": "{{"https://poddonu.com.ua/product/".$product->id}}",
+              "name": "{{$product->title}}"
+            }
+          }]
+        }
+    </script>
+
 </head>
 <body>
 
@@ -96,5 +125,6 @@
 
 <!-- Scripts -->
 <script src="{{ asset('js/site/site.js') }}"></script>
+
 </body>
 </html>
